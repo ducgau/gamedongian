@@ -29,15 +29,20 @@ var hero = new Hero('ninja1.jpg', 0, 0, 100);
 
 function start() {
     if (hero.left < window.innerWidth - hero.size && hero.top === 0) {
+        hero.image='ninja1.jpg';
         hero.moveRight();
     }
     if (hero.left > window.innerWidth - hero.size && hero.top < window.innerHeight - hero.size) {
+        hero.image='ninja4.jpg';
         hero.moveDown();
     }
     if (hero.top >= window.innerHeight - hero.size) {
+        hero.image='ninja3.jpg';
         hero.moveleft();
     }
     if (hero.left === 0) {
+        hero.image='ninja2.jpg'
+
         hero.moveup();
     }
     document.getElementById("game").innerHTML = hero.getHeroElement();
